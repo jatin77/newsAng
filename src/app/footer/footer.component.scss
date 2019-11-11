@@ -1,0 +1,134 @@
+@import "../../styles/fonts";
+@import "../../styles/mixins";
+
+.footer {
+  &--header {
+    border-top: 2px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    @include for-tablet-landscape-down {
+      grid-template-columns: auto;
+    }
+    &-subscribe {
+      display: flex;
+      @include for-tablet-landscape-down {
+        justify-self: center;
+      }
+      input {
+        border: 0.5px solid #ccc;
+        text-indent: 1rem;
+      }
+      .my-btn {
+        background: #000;
+        color: #fff;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+        cursor: pointer;
+        border: 0.5px solid #000;
+        &:hover {
+          background: #fff;
+          color: #ccc;
+          border: 0.5px solid #000;
+        }
+      }
+    }
+    &-logo {
+      justify-self: center;
+      font-family: $logo-font;
+      font-size: 1.5rem;
+    }
+    &-social {
+      justify-self: end;
+      @include for-tablet-landscape-down {
+        justify-self: center;
+      }
+      ul {
+        li {
+          cursor: pointer;
+          font-size: 0.8rem;
+          border-radius: 50%;
+          border: 0.5px solid #ccc;
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          text-align: center;
+          &:hover {
+            color: #ccc;
+            border-color: #000;
+          }
+        }
+        li:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &--gotos {
+    &-box {
+      div p {
+        font-size: 0.8rem;
+        margin: 1rem 0 !important;
+      }
+
+      .papers-box {
+        img {
+          width: 100px;
+          height: 150px;
+        }
+        span {
+          margin: 0.5rem 0 0 0 !important;
+        }
+      }
+    }
+    &-wrapper {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @include for-tablet-nineNineTwo-down {
+        display: none;
+      }
+      &-sec {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        @include for-tablet-nineNineTwo-down {
+          display: none;
+        }
+      }
+    }
+    &-head {
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    span {
+      outline: none !important;
+      border: none !important;
+      margin: 1rem 1rem 1rem 0;
+      font-size: 0.8rem;
+    }
+  }
+  &--end-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-size: 0.6rem;
+    color: #ccc;
+    align-items: center;
+    @include for-tablet-portrait-down {
+      grid-template-columns: auto auto;
+    }
+    &-box2 {
+      @include for-tablet-portrait-down {
+        display: none;
+      }
+    }
+    &-box3 {
+      @include for-tablet-portrait-down {
+        display: none;
+      }
+    }
+  }
+  &--end-flag {
+    justify-self: end;
+  }
+}

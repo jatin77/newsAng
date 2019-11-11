@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="container ">
+    <div class="border-bottom">
+      <div class="header__grid">
+        <app-search></app-search>
+        <h1 class="header__grid--logo text-center">The Daily Times</h1>
+        <div class="header__grid--temp">temp</div>
+      </div>
+
+      <div class="header--today text-center mb-3">
+        <small>{{ today | date: "medium" }}</small>
+      </div>
+    </div>
+    <app-nav [recievedCount]="e"></app-nav>
+    <app-select-country (changeCountry)="onChange($event)"></app-select-country>
+  </div>
+</header>

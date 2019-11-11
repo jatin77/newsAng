@@ -1,0 +1,32 @@
+<div *ngIf="articles.length === 0" class="text-center mt-3">
+  <div class="lds-ripple">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<div class="mt-5" *ngIf="articles.length !== 0">
+  <ng-container *ngFor="let article of articles">
+    <div class="article">
+      <div class="article--img">
+        <img
+          [src]="
+            article.urlToImage !== null ? article.urlToImage : placeholderImg
+          "
+          alt=""
+        />
+      </div>
+      <div class="article--content">
+        <div class="article--title">
+          <h5>{{ article.title }}</h5>
+        </div>
+        <div class="article--desc">
+          <p>{{ article.description }}</p>
+        </div>
+        <div class="article--desc">
+          <a href="{{ article.url }}" target="_blank">{{ article.content }}</a>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

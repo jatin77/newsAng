@@ -1,0 +1,19 @@
+@import "../../styles/fonts";
+
+.menu {
+  border-bottom: 2px solid;
+
+  span {
+    cursor: pointer;
+    font-family: $bold-font;
+    font-weight: bold;
+    border: none !important;
+    outline: none !important;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+.active {
+  color: #ccc;
+}

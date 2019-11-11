@@ -1,0 +1,17 @@
+<div class="input-group my-3">
+  <select
+    class="custom-select"
+    id="inputGroupSelect02"
+    [(ngModel)]="mySelect"
+    (change)="showSelectValue(mySelect)"
+    ><option value="select">Choose country</option>
+    <option value="us">US</option>
+    <option value="in">India</option>
+    <option value="ae">United Arab Emirates</option>
+    <option value="ar">Argentina</option>
+    <option value="au">Australia</option>
+  </select>
+  <div class="input-group-append">
+    <label class="input-group-text" for="inputGroupSelect02">Country</label>
+  </div>
+</div>

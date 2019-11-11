@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnChanges } from "@angular/core";
 import { ViewEncapsulation } from "@angular/compiler/src/core";
+import { GetPagesService } from "../services/get-pages.service";
 
 @Component({
   selector: "app-header",
@@ -9,7 +10,8 @@ import { ViewEncapsulation } from "@angular/compiler/src/core";
 export class HeaderComponent implements OnInit {
   today: number;
   e: string = "us";
-  constructor() {}
+  show: boolean;
+  constructor(private serv: GetPagesService) {}
 
   ngOnInit() {
     this.todayIs();

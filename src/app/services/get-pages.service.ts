@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject } from "rxjs";
 @Injectable({
   providedIn: "root"
 })
@@ -11,6 +12,8 @@ export class GetPagesService {
   country: string = "us";
 
   category: string;
+
+  show: boolean = true;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -28,5 +31,10 @@ export class GetPagesService {
         `${this.apiUrl}top-headlines?country=${this.country}&apiKey=${this.apiKey}`
       );
     }
+  }
+
+  toggleShow() {
+    console.log(this.show);
+    this.show = !this.show;
   }
 }

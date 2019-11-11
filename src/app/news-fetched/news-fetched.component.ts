@@ -8,6 +8,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class NewsFetchedComponent implements OnInit {
   @Input() articles: [];
+  params: {} = {};
   placeholderImg: string =
     "https://images.ctfassets.net/mk9nps9h607g/5DnT6NoTCguwc4egkiGcIg/b3f22bef3f59efa5b8711c8268cde80a/news-placeholder.jpg";
 

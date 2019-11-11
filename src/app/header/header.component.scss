@@ -4,11 +4,12 @@
 .header {
   &__grid {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
+    // grid-template-columns: 1fr auto 1fr;
+    // align-items: center;
     &--logo {
       font-family: $logo-font;
-      justify-self: center;
+      // justify-self: center;
+
       @include for-tablet-portrait-up {
         font-size: 3rem;
       }
@@ -20,6 +21,9 @@
       }
       @include for-big-desktop-up {
         font-size: 5rem;
+      }
+      @include for-phone-only {
+        font-size: 2rem;
       }
     }
     &--temp {

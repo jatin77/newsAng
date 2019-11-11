@@ -33,6 +33,6 @@ export class NewsSectionComponent implements OnInit {
   displayPage() {
     this.getPages
       .fetchPages(this.selectedCategory, this.selectedCountry)
-      .subscribe(data => (this.articles = data.articles));
+      .subscribe((data: any) => (this.articles = data.articles));
   }
 }
